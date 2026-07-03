@@ -18,7 +18,7 @@ export const PLAN_LIMITS: Record<PlanType, PlanLimits> = {
         maxBooks: 10,
         maxSessionsPerMonth: 50,
         maxDurationPerSession: 30,
-        hasSessionHistory: true,
+        hasSessionHistory: false,
     },
     [PLANS.STANDARD]: {
         maxBooks: 50,
