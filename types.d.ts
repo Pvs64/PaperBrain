@@ -5,8 +5,6 @@ import { LucideIcon } from 'lucide-react';
 import z from 'zod';
 import { UploadSchema } from '@/lib/zod';
 
-declare module '*.css';
-
 // ============================================
 // DATABASE MODELS
 // ============================================
