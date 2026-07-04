@@ -58,7 +58,6 @@ const VapiControls = ({ book }: { book: IBook }) => {
                             height={180}
                             className="vapi-cover-image !w-[120px] !h-auto"
                             priority
-                            style={{ width: 'auto', height: '100%' }}
                         />
                         <div className="vapi-mic-wrapper relative">
                             {isActive && (status === 'speaking' || status === 'thinking') && (
@@ -118,4 +117,5 @@ const VapiControls = ({ book }: { book: IBook }) => {
         </>
     )
 }
-export default VapiControls
+
+export default VapiControls;

@@ -134,27 +134,9 @@ const UploadForm = () => {
             form.reset();
             router.push('/');
         } catch (error) {
-            console.error('Upload error details:', error);
-            
-            let errorMessage = "Failed to upload book. Please try again later.";
-            
-            if (error instanceof Error) {
-                // Check for specific error messages
-                if (error.message.includes('network') || error.message.includes('fetch')) {
-                    errorMessage = "Network error. Please check your connection and try again.";
-                } else if (error.message.includes('Unauthorized')) {
-                    errorMessage = "Authentication failed. Please log in again.";
-                } else if (error.message.includes('size')) {
-                    errorMessage = "File is too large. Maximum size is 50MB.";
-                } else if (error.message.includes('PDF')) {
-                    errorMessage = error.message; // Show specific PDF parsing error
-                } else {
-                    // Log the full error for debugging
-                    console.error('Full error:', error.message);
-                }
-            }
-            
-            toast.error(errorMessage);
+            console.error(error);
+
+            toast.error("Failed to upload book. Please try again later.");
         } finally {
             setIsSubmitting(false);
         }
